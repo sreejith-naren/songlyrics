@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+pre {
+  font-family: 'Poppins', sans-serif;
+}
+.nav-bar {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 93px;
+  margin: 0;
+}
+.heading {
+  display: contents;
+  text-align: center;
+}
+.song {
+  color: rgb(17, 147, 223);
+  background: transparent;
+}
+.lyrics {
+  color: rgb(17, 147, 223);;
+  background: transparent;
+}
+.com {
+  color: rgb(45, 45, 45);
+  background: transparent;
+  padding-top: 17px;
+}
+.artist {
+  min-width: 20rem;
+}
+div.col-3 {
+  border-right: 1px dotted black;
+  font-size: 95%; 
+}
+div.col-6 { 
+  font-size: 85%;
+}
+li.current{
+  background-color: rgb(165, 80, 177);
+  color: aqua;
+}
