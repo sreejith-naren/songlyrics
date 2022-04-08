@@ -18,7 +18,8 @@ def list_all_songs(aid):
     songs= crawler.get_all_songs(aid)
     singer= crawler.singer(aid)
     artists= crawler.get_all_artist()
-    return render_template("songlist.html",artists=artists,songs=songs, singer=singer, current= aid)
+    song_array=[{"song_id":i[1], "song_name" : i[0]} for i in songs]
+    return jsonify(song_array)
 
 @app.route("/songs/<int:aid>/lyrics/<int:sid>")
 def lyrics(sid,aid):
@@ -26,7 +27,7 @@ def lyrics(sid,aid):
     songs= crawler.get_all_songs(aid)
     singer= crawler.singer(aid)
     artists= crawler.get_all_artist()
-    return render_template("lyrics.html",lyrics=lyrics, artists=artists, songs=songs, singer=singer, current=aid, csong=sid)
+    return jsonify(lyrics)
 
 
 if __name__=="__main__":
